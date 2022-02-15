@@ -37,15 +37,16 @@ sum(1,2,3);
 - 가변인자의 초기화 매크로   
 - 가변인자 중 첫 번째 인자의 주소를 가르쳐 준다.
 - pN : 가변인자의 마지막 고정인수   
+- ```#define va_start(ap, v)	( (ap) = (va_list)_ADDRESSOF(v) + _INTSIZEOF(v) )```
 
 
 ```va_arg(ap, type);```   
 - 가변인자의 값을 가져오는 매크로   
 - type : 가져올 변수의 type을 지정   
-
+- ```#define va_arg(ap, t)	( *(t *)((ap += -INTSIZEOF(t)) - _INTSIZEOF(t)) )```
 
 ```va_end(ap);```   
 - ap(va_list)에 들어있는 포인터를 참조하여 초기화하는 매크로    
 - 가변인자 변수를 끝낼 때 사용  
 - 단순히 NULL 포인터로 바꿔주는 매크로    
-- ```#define va_end(ap)	( ap = (va_list)0 );```
+- ```#define va_end(ap)		( ap = (va_list)0 )```
