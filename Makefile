@@ -6,7 +6,7 @@
 #    By: jaewoo <jaewoo@student.42seoul.kr>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/02/17 21:23:27 by jaewoo            #+#    #+#              #
-#    Updated: 2022/02/17 22:07:56 by jaewoo           ###   ########.fr        #
+#    Updated: 2022/02/17 22:28:05 by jaewoo           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -28,3 +28,15 @@ OBJS = $(SRCS:.c=.o)
 
 all: ${NAME}
 
+clean :
+	rm -f $(OBJS)
+
+fclean : clean
+	rm -f $(NAME)
+
+.c.o :
+	$(CC) $(FLAGS) -c $< -o $(<:.c=.o)
+
+re : fclean all
+
+.PHONY : all clean fclean re
