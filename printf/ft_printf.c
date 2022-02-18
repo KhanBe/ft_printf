@@ -6,7 +6,7 @@
 /*   By: jaewoo <jaewoo@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/16 22:49:20 by jaewoo            #+#    #+#             */
-/*   Updated: 2022/02/16 22:57:39 by jaewoo           ###   ########.fr       */
+/*   Updated: 2022/02/18 16:18:04 by jaewoo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,10 @@ int	ft_check(va_list ap, char c)
 	int	bytes;
 
 	bytes = 0;
+	if (c == '%')
+		bytes += ft_percent();
+	if (c == 'c')
+		bytes += ft_c(va_arg(ap, char *));
 }
 
 int	ft_printf(const char *str, ...)
@@ -33,6 +37,7 @@ int	ft_printf(const char *str, ...)
 		if (str[i] == '%')
 		{
 			bytes += ft_check(ap, c);
+			i++;
 		}
 		i++;
 	}
