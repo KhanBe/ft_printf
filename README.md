@@ -50,3 +50,5 @@ sum(1,2,3);
 - 가변인자 변수를 끝낼 때 사용  
 - 단순히 NULL 포인터로 바꿔주는 매크로    
 - ```#define va_end(ap)		( ap = (va_list)0 )```
+
+### printf   
