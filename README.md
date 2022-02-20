@@ -51,4 +51,12 @@ sum(1,2,3);
 - 단순히 NULL 포인터로 바꿔주는 매크로    
 - ```#define va_end(ap)		( ap = (va_list)0 )```
 
-### printf   
+### printf  
+
+- 헤더 파일
+```<stdio.h>```   
+
+- 프로토타입
+``` int printf(const char *format, ...);```   
+
+- 반환 값 : 출력되는 문자열의 길이 
