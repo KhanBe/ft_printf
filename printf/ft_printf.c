@@ -6,7 +6,7 @@
 /*   By: jaewoo <jaewoo@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/16 22:49:20 by jaewoo            #+#    #+#             */
-/*   Updated: 2022/02/19 23:00:27 by jaewoo           ###   ########.fr       */
+/*   Updated: 2022/02/23 19:57:58 by jaewoo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,8 @@ int	ft_check(va_list ap, char c)
 		bytes += ft_d_i(va_arg(ap, int));
 	if (c == 'u')
 		bytes += ft_u(va_arg(ap, int));
+	if (c == 'x' || c == 'X')
+		bytes += ft_x(va_arg(ap, unsigned int), c);
 	return (bytes);
 }
 
@@ -36,6 +38,8 @@ int	ft_printf(const char *str, ...)
 {
 	va_list	ap;
 	int		i;
+	int		bytes;
+	char	c;
 
 	i = 0;
 	bytes = 0;
@@ -48,6 +52,8 @@ int	ft_printf(const char *str, ...)
 			bytes += ft_check(ap, c);
 			i++;
 		}
+		else
+			bytes += write(1, &str[i], sizeof(char));
 		i++;
 	}
 	va_end(ap);
