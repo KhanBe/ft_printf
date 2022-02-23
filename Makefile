@@ -6,7 +6,7 @@
 #    By: jaewoo <jaewoo@student.42seoul.kr>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/02/17 21:23:27 by jaewoo            #+#    #+#              #
-#    Updated: 2022/02/17 22:28:05 by jaewoo           ###   ########.fr        #
+#    Updated: 2022/02/23 20:19:22 by jaewoo           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,10 +19,26 @@ LIBFTPRINTF = ${PATH}/ft_printf.h
 CC = clang
 
 FLAGS = -Wall -Werror -Wextra
+
 INCLUDE = -I ${PATH}
 
-SRCS_PATH = ./ft_printf
-SRCS = ${SRCS_PATH}/ft_printf.c
+SRCS_PATH = ./printf
+
+SRCS = ${SRCS_PATH}/ft_printf.c \
+       ${SRCS_PATH}/ft_c.c \
+       ${SRCS_PATH}/ft_check_arg.c \
+       ${SRCS_PATH}/ft_ft_d_i.c \
+       ${SRCS_PATH}/ft_decimal_length.c \
+       ${SRCS_PATH}/ft_decimal_to_hex.c \
+       ${SRCS_PATH}/ft_free.c \
+       ${SRCS_PATH}/ft_hex_length \
+       ${SRCS_PATH}/ft_p.c \
+       ${SRCS_PATH}/ft_percent.c \
+       ${SRCS_PATH}/ft_reversed_string_print.c \
+       ${SRCS_PATH}/ft_s.c \
+       ${SRCS_PATH}/ft_u.c \
+       ${SRCS_PATH}/ft_x.c
+
 
 OBJS = $(SRCS:.c=.o)
 
