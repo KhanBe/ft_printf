@@ -6,7 +6,7 @@
 /*   By: jaewoo <jaewoo@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/23 19:45:36 by jaewoo            #+#    #+#             */
-/*   Updated: 2022/02/23 19:48:46 by jaewoo           ###   ########.fr       */
+/*   Updated: 2022/02/23 23:36:27 by jaewoo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ int	ft_x(unsigned int n, char flag)
 	num = (char *)malloc((ft_hex_length(n) + 1) * sizeof(char));
 	while (n)
 	{
-		num[i++] = ft)decimal_to_hex(n % 16, flag);
+		num[i++] = ft_decimal_to_hex(n % 16, flag);
 		n /= 16;
 	}
 	num[i] = '\0';
