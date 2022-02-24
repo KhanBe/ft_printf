@@ -6,13 +6,13 @@
 #    By: jaewoo <jaewoo@student.42seoul.kr>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/02/17 21:23:27 by jaewoo            #+#    #+#              #
-#    Updated: 2022/02/23 23:30:47 by jaewoo           ###   ########.fr        #
+#    Updated: 2022/02/24 22:30:30 by jaewoo           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libftprintf.a
 
-PATH = ./header
+LIBFT_PATH = ./libft
 LIBFT = ./libft/libft.a
 LIBFTPRINTF = ${PATH}/ft_printf.h
 
@@ -21,7 +21,7 @@ ARFLAGS = crv
 CC = gcc
 FLAGS = -Wall -Werror -Wextra
 
-INCLUDE = -I ${PATH}
+INCLUDE = -I ${LIBFT_PATH}
 
 SRCS_PATH = ./printf
 
@@ -51,11 +51,15 @@ clean :
 fclean : clean
 	rm -f $(NAME)
 
-$(NAME) : $(OBJS)
+$(NAME) : $(OBJS) $(LIBFT)
 	$(AR) $(ARFLAGS) $@ $^
 
+$(LIBFT) :
+	make bonus -C libft
+	cp $(LIBFT) $(NAME)
+
 .c.o :
-	$(CC) $(FLAGS) -c $< -o $(<:.c=.o)
+	$(CC) $(FLAGS) -c $< -o $(<:.c=.o) $(INCLUDE)
 
 re : fclean all
 
