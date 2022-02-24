@@ -6,7 +6,7 @@
 #    By: jaewoo <jaewoo@student.42seoul.kr>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/02/17 21:23:27 by jaewoo            #+#    #+#              #
-#    Updated: 2022/02/24 22:30:30 by jaewoo           ###   ########.fr        #
+#    Updated: 2022/02/24 22:42:59 by jaewoo           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -46,9 +46,11 @@ OBJS = $(SRCS:.c=.o)
 all: $(NAME)
 
 clean :
+	make clean -C libft
 	rm -f $(OBJS)
 
 fclean : clean
+	make fclean -C libft
 	rm -f $(NAME)
 
 $(NAME) : $(OBJS) $(LIBFT)
