@@ -6,7 +6,7 @@
 /*   By: jaewoo <jaewoo@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/20 19:52:12 by jaewoo            #+#    #+#             */
-/*   Updated: 2022/02/23 23:34:18 by jaewoo           ###   ########.fr       */
+/*   Updated: 2022/02/25 17:26:43 by jaewoo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ int	ft_p(unsigned long address)
 
 	i = 0;
 	if (!address)
-		return (write(1, "(nil)", sizeof(char) * 5));
+		return (write(1, "0x0", sizeof(char) * 3));
 	bytes = write(1, "0x", sizeof(char) * 2);
 	number = (char *)malloc(((ft_hex_length(address)) + 1) * sizeof(char));
 	while (address)
