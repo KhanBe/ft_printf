@@ -6,7 +6,7 @@
 #    By: jaewoo <jaewoo@student.42seoul.kr>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/02/17 21:23:27 by jaewoo            #+#    #+#              #
-#    Updated: 2022/02/24 22:42:59 by jaewoo           ###   ########.fr        #
+#    Updated: 2022/02/28 23:15:49 by jaewoo           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -27,7 +27,6 @@ SRCS_PATH = ./printf
 
 SRCS = ${SRCS_PATH}/ft_printf.c \
        ${SRCS_PATH}/ft_c.c \
-       ${SRCS_PATH}/ft_check_arg.c \
        ${SRCS_PATH}/ft_d_i.c \
        ${SRCS_PATH}/ft_decimal_length.c \
        ${SRCS_PATH}/ft_decimal_to_hex.c \
