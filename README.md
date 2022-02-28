@@ -76,3 +76,17 @@ sum(1,2,3);
 - %% : 퍼센트 기호 (%) 를 출력합니다.   
 
 참고자료 man 3 printf / man 3 stdarg
+
+```ft_printf.c```
+```ft_c.c```
+```ft_d_i.c```
+```ft_p.c```
+```ft_s.c```
+```ft_u.c```
+```ft_x.c```
+```ft_percent.c```
+```ft_decimal_length.c```
+```ft_hex_length.c```
+```ft_decimal_to_hex.c```
+```ft_reversed_string_print.c```
+```ft_free.c```
