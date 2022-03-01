@@ -78,29 +78,43 @@ sum(1,2,3);
 참고자료 man 3 printf / man 3 stdarg
 
 ```ft_printf.h```
+- ```ft_printf```함수의 헤더파일
 
-```ft_printf.c```
+```ft_printf```
+- ```ft_printf```함수
 
-```ft_c.c```
+```ft_c```
+- %c 서식 지정자 함수
 
-```ft_d_i.c```
+```ft_d_i```
+- %d, %i 서식 지정자 함수
 
-```ft_p.c```
+```ft_p```
+- %p 서식 지정자 함수
 
-```ft_s.c```
+```ft_s```
+- %s 서식 지정자 함수
 
-```ft_u.c```
+```ft_u```
+- %u 서식 지정자 함수
 
-```ft_x.c```
+```ft_x```
+- %x 서식 지정자 함수
 
-```ft_percent.c```
+```ft_percent```
+- %% 서식 지정자 함수
 
-```ft_decimal_length.c```
+```ft_decimal_length```
+- 10진수의 길이 반환하는 함수
 
-```ft_hex_length.c```
+```ft_hex_length```
+- 16진수의 길이 반환하는 함수
 
-```ft_decimal_to_hex.c```
+```ft_decimal_to_hex```
+- 10진수를 16진수로 변환하는 함수
 
-```ft_reversed_string_print.c```
+```ft_reversed_string_print```
+- 문자열 반대로 출력하는 함수
 
-```ft_free.c```
+```ft_free```
+- 
